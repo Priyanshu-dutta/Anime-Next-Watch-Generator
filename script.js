@@ -108,4 +108,23 @@ searchInput.addEventListener("keydown", async function (e) {
   displayAnime(data.data);
 });
 
+const toggleBtn = document.getElementById("themeToggle");
+
+// apply saved theme on load
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-mode");
+  toggleBtn.textContent = "🌞 Light";
+}
+
+// toggle on click
+toggleBtn.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  const isLight = document.body.classList.contains("light-mode");
+
+  toggleBtn.textContent = isLight ? "🌞 Light" : "🌙 Dark";
+
+  // save preference
+  localStorage.setItem("theme", isLight ? "light" : "dark");
+});
 

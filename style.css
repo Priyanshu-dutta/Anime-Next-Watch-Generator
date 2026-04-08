@@ -218,3 +218,32 @@ h1 {
     text-decoration: none;
     color: inherit;
 }
+
+
+
+
+/* 🌞 LIGHT MODE */
+.light-mode {
+    background: #f5f5f5;
+    color: #111;
+}
+
+.light-mode .overlay {
+    background: rgba(255,255,255,0.8);
+    color: #111;
+}
+
+.light-mode .card {
+    background: rgba(0,0,0,0.05);
+}
+
+.light-mode .controls button,
+.light-mode .controls input,
+.light-mode #genreSelect {
+    background: rgba(0,0,0,0.1);
+    color: #111;
+}
+
+.light-mode .hover-content {
+    background: rgba(255,255,255,0.6);
+}
